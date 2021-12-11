@@ -1,4 +1,5 @@
-package datastructures;
+import dataStructures.linear.Array;
+
 import java.util.Arrays;
 
 public class MainArray {

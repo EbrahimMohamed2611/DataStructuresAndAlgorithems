@@ -1,4 +1,4 @@
-package datastructures;
+package dataStructures.linear;
 public class Array {
 //build Dynamic Array
 	private int [] items;
