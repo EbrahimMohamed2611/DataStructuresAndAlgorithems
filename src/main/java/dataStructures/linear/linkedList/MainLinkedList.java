@@ -17,7 +17,7 @@ public class MainLinkedList {
 
         System.out.println(linkedList.size());
         System.out.println(Arrays.toString(linkedList.toArray()));
-        System.out.println(Arrays.toString(linkedList.toArrays()));
+       // System.out.println(Arrays.toString(linkedList.toArrays()));
 //        System.out.println(linkedList.indexOf(20));
 //        System.out.println(linkedList.contains(20));
 //        System.out.println(linkedList.contains(100));
