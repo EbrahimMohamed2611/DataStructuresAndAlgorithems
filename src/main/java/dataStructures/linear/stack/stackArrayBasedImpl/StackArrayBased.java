@@ -22,33 +22,37 @@ public class StackArrayBased<T> {
     }
 
     public void push(T item) {
-        if(!isFull())
+        if (!isFull())
             items[top++] = item;
         else
             throw new StackOverflowError();
     }
 
     public T pop() {
-        if(!isEmpty())
-           return items[--top];
+        if (!isEmpty())
+            return items[--top];
         else
             throw new IllegalStateException();
     }
 
-    public T peek(){
-        if(!isEmpty())
-            return items[top-1];
+    public T peek() {
+        if (!isEmpty())
+            return items[top - 1];
         else
             throw new IllegalStateException();
     }
 
     public void clear() {
-        top=0;
+        for (int i = 0; i < items.length; i++) {
+            items[i] = null;
+        }
+        //Arrays.fill(items, null);
+        top = 0;
     }
 
     @Override
     public String toString() {
-       // return Arrays.stream(items).limit(top).collect(Collectors.toList()).toString();
+        // return Arrays.stream(items).limit(top).collect(Collectors.toList()).toString();
         T[] ts = Arrays.copyOfRange(items, 0, top);
         return Arrays.toString(ts);
     }
