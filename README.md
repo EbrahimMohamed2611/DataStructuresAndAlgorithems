@@ -7,6 +7,7 @@
    1. Stack Array Implementation
    2. Solve String Reverse
    3. Balanced Expression
+   4. Stack Linked list Implementation
 4. Queue
    1. Standard Queue
    2. Stack Queue
@@ -15,3 +16,5 @@
    5. Reverse Queue
 5. Hash Table
    1. Find First Non-Repeated Characters
+   2. Find First Repeated Characters
+   3. Build HashTable using Channing technique for solve Collision

@@ -1,0 +1,6 @@
+
+X	java:S125"<This block of commented-out lines of code should be removed.(áÍõ8¨»Ï¦ú/
+N	java:S106"9Replace this use of System.out or System.err by a logger.(µˆœÑ
+V
+java:S1128"4Remove this unused import 'java.util.LinkedHashMap'.(ò†ŠŞùÿÿÿÿ8ª»Ï¦ú/
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‘†²•şÿÿÿÿ
