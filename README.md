@@ -21,4 +21,4 @@
 # Algorithms
    ## Sorting
 1. Bubble Sort
-2. 
+2. Selection Sort
