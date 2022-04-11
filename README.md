@@ -18,3 +18,7 @@
    1. Find First Non-Repeated Characters
    2. Find First Repeated Characters
    3. Build HashTable using Channing technique for solve Collision
+# Algorithms
+   ## Sorting
+1. Bubble Sort
+2. 
