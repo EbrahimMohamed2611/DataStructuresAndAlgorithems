@@ -19,7 +19,10 @@
    2. Find First Repeated Characters
    3. Build HashTable using Channing technique for solve Collision
 # Algorithms
-   ## Sorting
+## Sorting
 1. Bubble Sort
 2. Selection Sort
 3. Insertion Sort
+4. 
+## Searching
+1. BinarySearch Using Iteration and Recursion ways (C++ with Template)
