@@ -2,7 +2,7 @@
 ![Data Structures And Algorithms ](DataStructuresAndAlgorithems.png)
 1. Arrays
 2. Linked List
-    1. Singly Linked List
+    1. Singly Linked List (using C++ and Template & Generic in java)
 3. Stack
    1. Stack Array Implementation
    2. Solve String Reverse
