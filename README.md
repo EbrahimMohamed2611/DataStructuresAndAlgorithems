@@ -3,6 +3,7 @@
 1. Arrays
 2. Linked List
     1. Singly Linked List (using C++ and Template & Generic in java)
+    2. Doubly Linked List (using C++ and Template)
 3. Stack
    1. Stack Array Implementation
    2. Solve String Reverse
