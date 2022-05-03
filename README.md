@@ -5,7 +5,7 @@
     1. Singly Linked List (using C++ and Template & Generic in java)
     2. Doubly Linked List (using C++ and Template)
 3. Stack
-   1. Stack Array Implementation
+   1. Stack Array Implementation (java and C++ using resize with template)
    2. Solve String Reverse
    3. Balanced Expression
    4. Stack Linked list Implementation
