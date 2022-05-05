@@ -12,7 +12,7 @@
 4. Queue
    1. Standard Queue
    2. Stack Queue
-   3. Circular Queue
+   3. Circular Queue (Using java With Generics and C++ With Template)
    4. Priority Queue
    5. Reverse Queue
 5. Hash Table
