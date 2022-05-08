@@ -27,3 +27,5 @@
 4. 
 ## Searching
 1. BinarySearch Using Iteration and Recursion ways (C++ with Template)
+## Techniques
+1. Fixed Sliding Window
