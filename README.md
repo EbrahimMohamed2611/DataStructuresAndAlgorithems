@@ -19,6 +19,8 @@
    1. Find First Non-Repeated Characters
    2. Find First Repeated Characters
    3. Build HashTable using Channing technique for solve Collision
+6. Binary Search Tree
+7. AVL Tree
 # Algorithms
 ## Sorting
 1. Bubble Sort
@@ -28,4 +30,5 @@
 ## Searching
 1. BinarySearch Using Iteration and Recursion ways (C++ with Template)
 ## Techniques
-1. Fixed Sliding Window
+1. Fixed Sliding Window 
+2. Flexible Sliding Window ( Also called Two Pointers )
