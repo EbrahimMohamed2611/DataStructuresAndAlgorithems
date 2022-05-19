@@ -20,7 +20,7 @@
    2. Find First Repeated Characters
    3. Build HashTable using Channing technique for solve Collision
 6. Binary Search Tree
-7. AVL Tree
+7. AVL Tree (Self Balanced Binary Tree)
 # Algorithms
 ## Sorting
 1. Bubble Sort
