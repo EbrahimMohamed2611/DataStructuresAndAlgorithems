@@ -21,6 +21,7 @@
    3. Build HashTable using Channing technique for solve Collision
 6. Binary Search Tree
 7. AVL Tree (Self Balanced Binary Tree)
+8. Heaps
 # Algorithms
 ## Sorting
 1. Bubble Sort
