@@ -3,7 +3,7 @@
 1. Arrays
 2. Linked List
     1. Singly Linked List (using C++ and Template & Generic in java)
-    2. Doubly Linked List (using C++ and Template)
+    2. Doubly Linked List (using C++ and Template & Generic in java)
 3. Stack
    1. Stack Array Implementation (java and C++ using resize with template)
    2. Solve String Reverse
@@ -22,6 +22,7 @@
 6. Binary Search Tree
 7. AVL Tree (Self Balanced Binary Tree)
 8. Heaps
+9. Tries
 # Algorithms
 ## Sorting
 1. Bubble Sort

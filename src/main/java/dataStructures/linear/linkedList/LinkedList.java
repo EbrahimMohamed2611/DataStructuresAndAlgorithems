@@ -1,150 +1,25 @@
 package dataStructures.linear.linkedList;
 
-import java.util.NoSuchElementException;
+public interface LinkedList<T> {
 
-public class LinkedList<E> {
+    void insertAtHead(T data);
 
-    private class Node<E> {
-        private E value;
-        private Node<E> nextNode;
+    void insertAtEnd(T data);
 
-        public Node(E value) {
-            this.value = value;
-        }
-    }
+    void deleteAtHead();
 
-    private Node<E> first;
-    private Node<E> last;
-    private int size;
+    void deleteAtEnd();
 
-    public void addLast(E value) {
-        Node<E> node = new Node<>(value);
-        if (isEmpty()) {
-            first = last = node;
-        } else {
-            last.nextNode = node;
-            last = node;
-        }
-        size++;
-    }
+    void deleteByValue(T data);
 
-    public void addFirst(E value) {
-        Node<E> node = new Node<>(value);
-        if (isEmpty()) {
-            first = last = node;
-        } else {
-            node.nextNode = first;
-            first = node;
-        }
-        size++;
-    }
+    void printList();
 
-    public int indexOf(E value) {
-        int index = 0;
-        Node<E> currentNode = first;
-        while (currentNode != null) {
-            if (currentNode.value == value)
-                return index;
-            else {
-                currentNode = currentNode.nextNode;
-                index++;
-            }
-        }
-        return -1;
-    }
+    boolean search(T data);
 
-    public boolean contains(E value) {
-        return indexOf(value) != -1;
-    }
+    int size();
 
-    public void removeFirst() {
-        // first case there's no Elements
-        //second case there is only one element
-        if (isEmpty()) {
-            throw new NoSuchElementException();
-        } else if (first == last) {
-            first = last = null;
-        } else {
-            // [10 -> 20 -> 30]
-            Node<E> second = first.nextNode;
-            first.nextNode = null;
-            first = second;
-        }
-        size--;
-    }
+    boolean isEmpty();
 
-    /**
-     * public void removeLast() {
-     * if (isEmpty())
-     * throw new NoSuchElementException();
-     * <p>
-     * if (first == last)
-     * first = last = null;
-     * Node<E> current = first;
-     * while (current.nextNode != null) {
-     * if (current.nextNode != last)
-     * current = current.nextNode;
-     * else
-     * current.nextNode = null;
-     * }
-     * last = current;
-     * }
-     */
-
-    public void removeLast() {
-        if (isEmpty())
-            throw new NoSuchElementException();
-
-        if (first == last)
-            first = last = null;
-        else {
-            Node<E> previous = getPrevious(last);
-            last = previous;
-            last.nextNode = null;
-
-        }
-        size--;
-    }
-
-    public int size() {
-        return size;
-    }
-
-    public E[] toArray(){
-        E[] array =(E[]) new Object[size];
-        int index = 0;
-        Node<E> current = first;
-        while (current != null ){
-            array[index++] = current.value;
-            current = current.nextNode;
-        }
-        return array;
-    }
-
-    /**
-     public E[] toArrays(){
-     E[] array = (E[]) new Object[size];
-     Node<E> currentNode = first;
-     for (int i = 0; i < size; i++) {
-     array[i] = currentNode.value;
-     currentNode = currentNode.nextNode;
-     }
-     return array;
-     }
-     */
-
-    private Node<E> getPrevious(Node<E> node) {
-        Node<E> current = first;
-        while (current.nextNode != null) {
-            if (current.nextNode == node)
-                return current;
-            current = current.nextNode;
-        }
-        return null;
-    }
-
-    private boolean isEmpty() {
-        return first == null;
-    }
+    T[] toArray();
 
 }
