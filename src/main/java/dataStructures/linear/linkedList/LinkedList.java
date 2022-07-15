@@ -22,4 +22,5 @@ public interface LinkedList<T> {
 
     T[] toArray();
 
+
 }

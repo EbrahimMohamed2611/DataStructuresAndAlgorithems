@@ -88,10 +88,12 @@ public class SinglyLinkedList<E> implements LinkedList<E> {
     @Override
     public void printList() {
         Node<E> current = head;
-        while (current!=null){
-            System.out.print(current.value + "\t");
+        System.out.print("head -> ");
+        while (current != null) {
+            System.out.print(current.value + " -> ");
             current = current.nextNode;
         }
+        System.out.print("Null\n");
     }
 
     @Override
@@ -186,6 +188,34 @@ public class SinglyLinkedList<E> implements LinkedList<E> {
     @Override
     public boolean isEmpty() {
         return head == null;
+    }
+
+    public static <E> void reverse(SinglyLinkedList<E> linkedList) {
+        SinglyLinkedList<E>.Node<E> current = linkedList.head, prev = null, next = null;
+        if (linkedList.isEmpty())
+            throw new IllegalStateException("There is no Elements");
+
+        while (current != null) {
+            next = current.nextNode;
+            current.nextNode = prev;
+            prev = current;
+            current = next;
+        }
+        linkedList.head = prev;
+    }
+
+    public static <E> void reverseRecursively(SinglyLinkedList<E> linkedList) {
+        linkedList.head = reverseRecursivelyHelper(linkedList.head, null);
+    }
+
+    public static <E> SinglyLinkedList<E>.Node<E> reverseRecursivelyHelper(SinglyLinkedList<E>.Node<E> head, SinglyLinkedList<E>.Node<E> newHead) {
+        if (head == null)
+            return newHead;
+        SinglyLinkedList<E>.Node<E> next = head.nextNode;
+        head.nextNode = newHead;
+        newHead = head;
+        head = next;
+        return reverseRecursivelyHelper(head, newHead);
     }
 
 }

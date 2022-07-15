@@ -1,9 +1,12 @@
 # Data Structures And Algorithms
 ![Data Structures And Algorithms ](DataStructuresAndAlgorithems.png)
-1. Arrays
-2. Linked List
-    1. Singly Linked List (using C++ and Template & Generic in java)
-    2. Doubly Linked List (using C++ and Template & Generic in java)
+
+
+| #   | Data Structure     | Operations                                                                                            | Language |
+|-----|--------------------|-------------------------------------------------------------------------------------------------------|----------|
+| 1   | Arrays             | Microsoft Airbnb Palantir Yahoo                                                                       | Java C++ |
+| 2   | Singly Linked List | insertAtHead insertAtEnd deleteAtHead deleteAtEnd deleteByValue printList search size isEmpty toArray | Java C++ |
+| 3   | Doubly Linked List | insertAtHead insertAtEnd deleteAtHead deleteAtEnd deleteByValue printList search size isEmpty toArray | Java C++ |
 3. Stack
    1. Stack Array Implementation (java and C++ using resize with template)
    2. Solve String Reverse
@@ -23,6 +26,7 @@
 7. AVL Tree (Self Balanced Binary Tree)
 8. Heaps
 9. Tries
+10. Graphs
 # Algorithms
 ## Sorting
 1. Bubble Sort

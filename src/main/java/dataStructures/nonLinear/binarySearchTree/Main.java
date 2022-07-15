@@ -3,13 +3,12 @@ package dataStructures.nonLinear.binarySearchTree;
 public class Main {
     public static void main(String[] args) {
         BinarySearchTree<Integer> tree = new BinarySearchTree<>();
-        tree.insert(10);
-        tree.insert(20);
+        tree.insert(4);
         tree.insert(5);
-        tree.insert(7);
-        tree.insert(23);
-        tree.insert(25);
         tree.insert(2);
+        tree.insert(3);
+        tree.insert(9);
+        tree.insert(10);
 
 //        tree.add(10);
 //        tree.add(20);
@@ -36,7 +35,7 @@ public class Main {
 //        System.out.println(tree.isBinarySearchTree());
 //        System.out.println(tree.isBinarySearchTreeValid());
         tree.traverseInOrder();
-        tree.delete(23);
+        tree.delete(5);
         tree.traverseInOrder();
     }
 }
