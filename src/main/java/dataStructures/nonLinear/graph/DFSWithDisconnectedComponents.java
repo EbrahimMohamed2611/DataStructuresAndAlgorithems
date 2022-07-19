@@ -8,7 +8,7 @@ public class DFSWithDisconnectedComponents {
     public static List<Integer> dfsTraversal(int v, List<List<Integer>> graph) {
         List<Integer> traversed = new ArrayList<>();
         boolean[] visited = new boolean[v + 1];
-        for (int i = 1; i <= v; i++) {
+        for (int i = 1; i <= v; i++) { // loop to ensure you will traverse all component even disconnected
             if (!visited[i]) {
                 dfs(i, traversed, graph, visited);
             }

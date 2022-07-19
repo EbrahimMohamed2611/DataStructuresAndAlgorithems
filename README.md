@@ -27,6 +27,12 @@
 8. Heaps
 9. Tries
 10. Graphs
+    1. BFS with Multiple Components
+    2. DFS with Multiple Components
+    3. Is Undirected Graph Cycle using BFS
+    4. Is Undirected Graph Cycle using DFS
+    5. Build Directed Graph using Adjacency List and also Map<node, List<nodes>>
+    6. Build Weighted UnDirected Graph using Adjacency List<Edges>
 # Algorithms
 ## Sorting
 1. Bubble Sort
