@@ -33,14 +33,19 @@
     4. Is Undirected Graph Cycle using DFS
     5. Build Directed Graph using Adjacency List and also Map<node, List<nodes>>
     6. Build Weighted UnDirected Graph using Adjacency List<Edges>
+    7. Bipartite Graph using BFS
+
+
 # Algorithms
+
 ## Sorting
 1. Bubble Sort
 2. Selection Sort
 3. Insertion Sort
-4. 
+
 ## Searching
 1. BinarySearch Using Iteration and Recursion ways (C++ with Template)
+
 ## Techniques
 1. Fixed Sliding Window 
 2. Flexible Sliding Window ( Also called Two Pointers )
