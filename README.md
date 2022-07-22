@@ -34,6 +34,7 @@
     5. Build Directed Graph using Adjacency List and also Map<node, List<nodes>>
     6. Build Weighted UnDirected Graph using Adjacency List<Edges>
     7. Bipartite Graph using BFS
+    8. Bipartite Graph using DFS
 
 
 # Algorithms

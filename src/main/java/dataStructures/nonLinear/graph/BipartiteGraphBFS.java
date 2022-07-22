@@ -8,7 +8,7 @@ import java.util.Queue;
 
 
 
-public class BipartiteGraph {
+public class BipartiteGraphBFS {
     // first check if the Bipartite using BFS
     public static boolean isBipartite(int v, List<List<Integer>> adjacencyList) {
         Color[] colors = new Color[v + 1];
