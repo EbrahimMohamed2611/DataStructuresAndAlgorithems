@@ -4,7 +4,7 @@
 
 | #   | Data Structure     | Operations                                                                                            | Language |
 |-----|--------------------|-------------------------------------------------------------------------------------------------------|----------|
-| 1   | Arrays             | Microsoft Airbnb Palantir Yahoo                                                                       | Java C++ |
+| 1   | Arrays             | Add Remove Resize                                                                                     | Java C++ |
 | 2   | Singly Linked List | insertAtHead insertAtEnd deleteAtHead deleteAtEnd deleteByValue printList search size isEmpty toArray | Java C++ |
 | 3   | Doubly Linked List | insertAtHead insertAtEnd deleteAtHead deleteAtEnd deleteByValue printList search size isEmpty toArray | Java C++ |
 3. Stack
@@ -36,6 +36,7 @@
     7. Bipartite Graph using BFS
     8. Bipartite Graph using DFS
     9. Directed Graph Detect Cycle DFS
+    10. Minimum Spanning Tree using Prims
 
 
 # Algorithms
