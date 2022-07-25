@@ -35,6 +35,7 @@
     6. Build Weighted UnDirected Graph using Adjacency List<Edges>
     7. Bipartite Graph using BFS
     8. Bipartite Graph using DFS
+    9. Directed Graph Detect Cycle DFS
 
 
 # Algorithms
