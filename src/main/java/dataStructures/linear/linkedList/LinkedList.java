@@ -1,6 +1,6 @@
 package dataStructures.linear.linkedList;
 
-public interface LinkedList<T> {
+public interface LinkedList<T extends Comparable<T>> {
 
     void insertAtHead(T data);
 
@@ -14,7 +14,7 @@ public interface LinkedList<T> {
 
     void printList();
 
-    boolean search(T data);
+    boolean contains(T data);
 
     int size();
 
@@ -22,5 +22,6 @@ public interface LinkedList<T> {
 
     T[] toArray();
 
+    int indexOf(T value);
 
 }

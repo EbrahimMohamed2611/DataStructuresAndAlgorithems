@@ -1,12 +1,8 @@
 # Data Structures And Algorithms
 ![Data Structures And Algorithms ](DataStructuresAndAlgorithems.png)
 
-
-| #   | Data Structure     | Operations                                                                                            | Language |
-|-----|--------------------|-------------------------------------------------------------------------------------------------------|----------|
-| 1   | Arrays             | Add Remove Resize                                                                                     | Java C++ |
-| 2   | Singly Linked List | insertAtHead insertAtEnd deleteAtHead deleteAtEnd deleteByValue printList search size isEmpty toArray | Java C++ |
-| 3   | Doubly Linked List | insertAtHead insertAtEnd deleteAtHead deleteAtEnd deleteByValue printList search size isEmpty toArray | Java C++ |
+1. Arrays
+2. LinkedList (Singly And Doubly (with Tail and without))
 3. Stack
    1. Stack Array Implementation (java and C++ using resize with template)
    2. Solve String Reverse
@@ -37,6 +33,7 @@
     8. Bipartite Graph using DFS
     9. Directed Graph Detect Cycle DFS
     10. Minimum Spanning Tree using Prims
+    11. Union Find
 
 
 # Algorithms
@@ -45,6 +42,7 @@
 1. Bubble Sort
 2. Selection Sort
 3. Insertion Sort
+4. Merge Sort
 
 ## Searching
 1. BinarySearch Using Iteration and Recursion ways (C++ with Template)

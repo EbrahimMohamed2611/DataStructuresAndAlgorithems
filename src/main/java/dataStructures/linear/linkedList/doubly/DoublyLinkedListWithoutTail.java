@@ -1,6 +1,8 @@
-package dataStructures.linear.linkedList;
+package dataStructures.linear.linkedList.doubly;
 
-public class DoublyLinkedList<T> implements LinkedList<T> {
+import dataStructures.linear.linkedList.LinkedList;
+
+public class DoublyLinkedListWithoutTail<T extends Comparable<T>> implements LinkedList<T> {
     // Class Node
     private class Node<T> {
         private Node<T> next;
@@ -17,7 +19,7 @@ public class DoublyLinkedList<T> implements LinkedList<T> {
     private Node<T> head;
     private int size;
 
-    public DoublyLinkedList() {
+    public DoublyLinkedListWithoutTail() {
         head = null;
         size = 0;
     }
@@ -109,7 +111,7 @@ public class DoublyLinkedList<T> implements LinkedList<T> {
     }
 
     @Override
-    public boolean search(T data) {
+    public boolean contains(T data) {
         Node<T> current = head;
         while (current != null) {
             if (current.data.equals(data))
@@ -138,6 +140,11 @@ public class DoublyLinkedList<T> implements LinkedList<T> {
             current = current.next;
         }
         return elements;
+    }
+
+    @Override
+    public int indexOf(T value) {
+        return 0;
     }
 
 

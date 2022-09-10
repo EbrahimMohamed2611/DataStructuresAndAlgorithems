@@ -1,8 +1,10 @@
-package dataStructures.linear.linkedList;
+package dataStructures.linear.linkedList.singly;
+
+import dataStructures.linear.linkedList.LinkedList;
 
 import java.util.NoSuchElementException;
 
-public class SinglyLinkedList<E> implements LinkedList<E> {
+public class SinglyLinkedListWithTail<E extends Comparable<E>> implements LinkedList<E> {
 
     private class Node<E> {
         private E value;
@@ -18,12 +20,25 @@ public class SinglyLinkedList<E> implements LinkedList<E> {
     private int size;
 
     @Override
+    public void insertAtHead(E value) {
+        Node<E> node = new Node<>(value);
+        if (isEmpty()) {
+            head = tail = node;
+        } else {
+            node.nextNode = head;
+            head = node;
+        }
+        size++;
+    }
+
+    @Override
     public void insertAtEnd(E value) {
         Node<E> node = new Node<>(value);
         if (isEmpty()) {
             head = tail = node;
         } else {
             tail.nextNode = node;
+            tail = node;
         }
         size++;
     }
@@ -97,34 +112,24 @@ public class SinglyLinkedList<E> implements LinkedList<E> {
     }
 
     @Override
-    public boolean search(E data) {
+    public boolean contains(E data) {
         return indexOf(data) != -1;
     }
 
-    @Override
-    public void insertAtHead(E value) {
-        Node<E> node = new Node<>(value);
-        if (isEmpty()) {
-            head = tail = node;
-        } else {
-            node.nextNode = head;
-            head = node;
-        }
-        size++;
-    }
 
-    private int indexOf(E value) {
+    @Override
+    public int indexOf(E value) {
         int index = 0;
         Node<E> currentNode = head;
         while (currentNode != null) {
-            if (currentNode.value == value)
+            if (currentNode.value.equals(value))
                 return index;
             else {
                 currentNode = currentNode.nextNode;
                 index++;
             }
         }
-        return -1;
+        throw new NoSuchElementException("Node With Value " + value.toString() + " not exist");
     }
 
 
@@ -153,7 +158,7 @@ public class SinglyLinkedList<E> implements LinkedList<E> {
 
     @Override
     public E[] toArray() {
-        E[] array = (E[]) new Object[size];
+        E[] array = (E[]) new Comparable[size];
         int index = 0;
         Node<E> current = head;
         while (current != null) {
@@ -178,7 +183,7 @@ public class SinglyLinkedList<E> implements LinkedList<E> {
     private Node<E> getPrevious(Node<E> node) {
         Node<E> current = head;
         while (current.nextNode != null) {
-            if (current.nextNode == node)
+            if (current.nextNode.equals(node))
                 return current;
             current = current.nextNode;
         }
@@ -190,8 +195,8 @@ public class SinglyLinkedList<E> implements LinkedList<E> {
         return head == null;
     }
 
-    public static <E> void reverse(SinglyLinkedList<E> linkedList) {
-        SinglyLinkedList<E>.Node<E> current = linkedList.head, prev = null, next = null;
+    public static <E extends Comparable<E>> void reverse(SinglyLinkedListWithTail<E> linkedList) {
+        SinglyLinkedListWithTail<E>.Node<E> current = linkedList.head, prev = null, next = null;
         if (linkedList.isEmpty())
             throw new IllegalStateException("There is no Elements");
 
@@ -204,14 +209,14 @@ public class SinglyLinkedList<E> implements LinkedList<E> {
         linkedList.head = prev;
     }
 
-    public static <E> void reverseRecursively(SinglyLinkedList<E> linkedList) {
+    public static <E extends Comparable<E>> void reverseRecursively(SinglyLinkedListWithTail<E> linkedList) {
         linkedList.head = reverseRecursivelyHelper(linkedList.head, null);
     }
 
-    public static <E> SinglyLinkedList<E>.Node<E> reverseRecursivelyHelper(SinglyLinkedList<E>.Node<E> head, SinglyLinkedList<E>.Node<E> newHead) {
+    public static <E extends Comparable<E>> SinglyLinkedListWithTail<E>.Node<E> reverseRecursivelyHelper(SinglyLinkedListWithTail<E>.Node<E> head, SinglyLinkedListWithTail<E>.Node<E> newHead) {
         if (head == null)
             return newHead;
-        SinglyLinkedList<E>.Node<E> next = head.nextNode;
+        SinglyLinkedListWithTail<E>.Node<E> next = head.nextNode;
         head.nextNode = newHead;
         newHead = head;
         head = next;
