@@ -76,6 +76,13 @@ public class UnDirectedGraphDetectCycleBFS {
 
         System.out.println(isGraphContainCycle(adjacencyList,nodes));
 
+        /*
+         A = 3
+ B = [
+        [1. 2]
+        [1, 3]
+     ]
+         */
         int numberOfNodes = 3;
         List<List<Integer>> adjacencyList2 = new ArrayList<>();
         for (int i = 0; i <= numberOfNodes; i++)

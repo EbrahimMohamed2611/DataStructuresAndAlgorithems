@@ -2,18 +2,31 @@ package dataStructures.nonLinear.tries.impl;
 
 import dataStructures.nonLinear.tries.Tries;
 
+import java.util.List;
+
 public class TriesArrayImpl implements Tries {
 
-    private final static int ALPHABETIC_SIZE = 26;
+    private final static int ALPHABET_SIZE = 26;
 
-    private class Node {
+    private static class Node {
         char value;
-        // Problem here is when create new node we will create 26 node also, but sometimes we need  less than this number on nodes
-        Node[] children = new Node[ALPHABETIC_SIZE];
+        Node[] children = new Node[ALPHABET_SIZE];// Problem here is when create new node we will create 26 node also, but sometimes we need  less than this number on nodes
         boolean isEndOfWord;
 
         public Node(char value) {
             this.value = value;
+        }
+
+        public boolean isEndOfWord() {
+            return isEndOfWord;
+        }
+
+        public boolean hasChild(char ch) {
+            return children[ch - 'a'] != null;
+        }
+
+        public Node getChild(char ch) {
+            return children[ch - 'a'];
         }
 
         @Override
@@ -22,7 +35,7 @@ public class TriesArrayImpl implements Tries {
         }
     }
 
-    private Node root = new Node(' ');
+    private final Node root = new Node(' ');
 
     @Override
     public void insert(String word) {
@@ -38,16 +51,51 @@ public class TriesArrayImpl implements Tries {
 
     @Override
     public boolean contains(String word) {
-        return false;
+        if (word == null) return false;
+
+        Node current = root;
+        for (char ch : word.toCharArray()) {
+            if (!current.hasChild(ch))
+                return false;
+            current = current.getChild(ch);
+        }
+        return current.isEndOfWord;
     }
 
     @Override
     public void traversPreOrder() {
+        traversPreOrder(root);
+    }
+
+    private void traversPreOrder(Node root) {
+        if (root == null) return;
+        System.out.print(root.value + "  ");
+        for (Node node : root.children)
+            traversPreOrder(node);
 
     }
 
     @Override
     public void traversPostOrder() {
+        traversPostOrder(root);
+    }
 
+    @Override
+    public void remove(String word) {
+
+    }
+
+
+    private void traversPostOrder(Node root) {
+        if (root == null) return;
+        for (Node node : root.children)
+            traversPostOrder(node);
+        System.out.print(root.value + "  ");
+
+    }
+
+    @Override
+    public List<String> findWords(String prefix) {
+        return null;
     }
 }

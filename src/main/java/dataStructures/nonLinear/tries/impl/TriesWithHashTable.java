@@ -6,8 +6,6 @@ import java.util.*;
 
 public class TriesWithHashTable implements Tries {
 
-    private final static int ALPHABETIC_SIZE = 26;
-
     private class Node {
         char value;
         Map<Character, Node> children = new HashMap<>();
@@ -39,7 +37,7 @@ public class TriesWithHashTable implements Tries {
         }
     }
 
-    private Node root = new Node(' ');
+    private final Node root = new Node(' ');
 
     @Override
     public void insert(String word) {
@@ -85,12 +83,70 @@ public class TriesWithHashTable implements Tries {
         traversPostOrder(root);
     }
 
+
     private void traversPostOrder(Node root) {
         for (Node current : root.children())
             traversPostOrder(current);
 
         System.out.print(root.value + "  ");
     }
+
+    @Override
+    public void remove(String word) {
+        if (word == null) return;
+        remove(root, word, 0);
+    }
+
+
+    private void remove(Node root, String word, int index) {
+        if (index == word.length()) {
+            root.isEndOfWord = false;
+            return;
+        }
+        char ch = word.charAt(index);
+        Node child = root.children.get(ch);
+        if (child == null) return;
+
+        remove(child, word, index + 1);
+
+        if (root.children().length == 0 && !root.isEndOfWord)
+            root.children.remove(root.value);
+
+    }
+
+    @Override
+    public List<String> findWords(String prefix) {
+        List<String> words = new ArrayList<>();
+        if (prefix == null)
+            return words;
+        Node lastNode = findLastNodeOf(prefix);
+        if (lastNode == null)
+            return words;
+        findWords(lastNode, prefix, words);
+        return words;
+    }
+
+    private void findWords(Node node, String prefix, List<String> words) {
+        if (node == null) return;
+
+        if (node.isEndOfWord)
+            words.add(prefix);
+
+        for (Node current : node.children())
+            findWords(current, prefix + current.value, words);
+
+    }
+
+    private Node findLastNodeOf(String prefix) {
+        Node current = root;
+        for (char ch : prefix.toCharArray()) {
+            if (!current.children.containsKey(ch))
+                return null;
+            current = current.getChild(ch);
+        }
+        return current;
+    }
+
 
 
 }

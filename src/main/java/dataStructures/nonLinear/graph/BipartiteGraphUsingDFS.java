@@ -5,27 +5,26 @@ import java.util.List;
 
 public class BipartiteGraphUsingDFS {
 
-    private static boolean isBipartite(List<List<Integer>> adjacencyList, int v){
-        Color[] colors = new Color[v+1];
+    private static boolean isBipartite(List<List<Integer>> adjacencyList, int v) {
+        Color[] colors = new Color[v + 1];
         for (int i = 1; i <= v; i++) {
-            if(!isBipartite(adjacencyList,i,colors))
+            if (!isBipartite(adjacencyList, i, colors))
                 return false;
         }
         return true;
     }
 
 
-
-        private static boolean isBipartite(List<List<Integer>> adjacencyList, int node, Color[] colors){
-        if(colors[node] == null)
+    private static boolean isBipartite(List<List<Integer>> adjacencyList, int node, Color[] colors) {
+        if (colors[node] == null)
             colors[node] = Color.READ;
 
-        for (int adjacencyNode : adjacencyList.get(node)){
-            if(colors[adjacencyNode] == null) { // That's mean it's not visiting
+        for (int adjacencyNode : adjacencyList.get(node)) {
+            if (colors[adjacencyNode] == null) { // That's mean it's not visited
                 colors[adjacencyNode] = colors[node] == Color.READ ? Color.BLACK : Color.READ;
-                if(!isBipartite(adjacencyList,adjacencyNode,colors))
+                if (!isBipartite(adjacencyList, adjacencyNode, colors))
                     return false;
-            }else if(colors[adjacencyNode] == colors[node])
+            } else if (colors[adjacencyNode] == colors[node])
                 return false;
         }
         return true;
@@ -67,6 +66,6 @@ public class BipartiteGraphUsingDFS {
         adjacencyList.get(11).add(8);
 
 
-        System.out.println(isBipartite(adjacencyList,nodes));
+        System.out.println(isBipartite(adjacencyList, nodes));
     }
 }
